@@ -1,9 +1,12 @@
+import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const SingleBookDetails = () => {
-  //const [allBooks, setAllBooks] = useState([]);
-  //const { book_id } = useParams();
+  const [allBooks, setAllBooks] = useState([]);
+  const { book_id } = useParams();
+
+  /*
   const location = useLocation();
   const {
     author,
@@ -17,16 +20,17 @@ const SingleBookDetails = () => {
     publisher,
     yearOfPublishing,
   } = location.state || {};
+   */
 
-  /*
   useEffect(() => {
     fetch("/fakeDB.json")
       .then((res) => res.json())
       .then((data) => setAllBooks(data));
   }, []);
 
-  const singleBook = allBooks.find((book) => book.bookId == book_id);
+  const singleBook = allBooks.find((book) => book.bookId == book_id) || {};
   const {
+    author,
     bookName,
     image,
     rating,
@@ -37,7 +41,6 @@ const SingleBookDetails = () => {
     publisher,
     yearOfPublishing,
   } = singleBook;
-*/
 
   const handleToastCart = () => {
     toast.success("Added to cart");

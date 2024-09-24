@@ -8,12 +8,12 @@ const Books = ({ book }) => {
 
   return (
     <Link to={`/book/${bookId}`} state={bookState}>
-      <div className="card bg-base-100 w-auto h-80 lg:w-96 lg:h-96 shadow-xl">
-        <figure className="px-10 pt-10">
+      <div className="card bg-base-100 shadow-xl">
+        <figure className="w-fit h-36">
           <img src={`${image}`} alt="Books" />
         </figure>
-        <div className="card-body">
-          <h2 className="lg:card-title text-md font-bold">{bookName}</h2>
+        <div className="card-body h-80">
+          <h2 className="card-title font-bold">{bookName}</h2>
           <p>Author : {author}</p>
           <p>Category: {category}</p>
           <p>Rating: {rating}</p>
