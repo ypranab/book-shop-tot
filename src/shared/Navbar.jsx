@@ -56,7 +56,7 @@ const Navbar = () => {
             <a>BLog</a>
           </li>
           <li>
-            <a>FAQ</a>
+            <Link to={`${ROUTES.FAQ}`}>FAQ</Link>
           </li>
         </ul>
       </div>
