@@ -17,7 +17,7 @@ const SingleBookDetails = () => {
   console.log(singleBook);
 
   return (
-    <div className="card lg:card-side bg-base-100 shadow-xl w-2/3">
+    <div className="card lg:card-side bg-base-100 shadow-xl w-3/4 mx-auto m-10 py-16">
       <figure className="w-1/2">
         <img src={`${singleBook?.image}`} alt="Album" />
       </figure>
@@ -25,7 +25,7 @@ const SingleBookDetails = () => {
         <h2 className="card-title">{singleBook?.bookName}</h2>
         <p>{author}</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Listen</button>
+          <button className="btn btn-primary">Add to Cart</button>
         </div>
       </div>
     </div>
