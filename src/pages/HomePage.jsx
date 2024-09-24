@@ -2,6 +2,7 @@ import { useState } from "react";
 import { getAllBooks } from "../utils/book";
 import { useEffect } from "react";
 import Books from "../components/Books";
+import Banner from "../components/Banner";
 
 const HomePage = () => {
   const [books, setBooks] = useState([]);
@@ -14,11 +15,14 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-3 gap-4">
-      {books.map((book) => (
-        <Books key={book.bookId} book={book}></Books>
-      ))}
-    </div>
+    <>
+      <Banner></Banner>
+      <div className="grid grid-cols-3 gap-4 m-12">
+        {books.map((book) => (
+          <Books key={book.bookId} book={book}></Books>
+        ))}
+      </div>
+    </>
   );
 };
 
