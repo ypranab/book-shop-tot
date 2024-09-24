@@ -3,6 +3,8 @@ import { ROUTES } from "../routes/routes";
 import Common from "../layouts/Common";
 import HomePage from "../pages/HomePage";
 import SingleBookDetails from "../pages/SingleBookDetails";
+import FAQ from "../pages/FAQ";
+import Error from "../pages/Error";
 
 const router = createBrowserRouter([
   {
@@ -17,11 +19,21 @@ const router = createBrowserRouter([
         path: `${ROUTES.SINGLE_BOOK.STATIC}`,
         element: <SingleBookDetails></SingleBookDetails>,
       },
+      {
+        path: `${ROUTES.FAQ}`,
+        element: <FAQ></FAQ>,
+      },
     ],
   },
   {
     path: "*",
-    element: <div>Error</div>,
+    element: <Common></Common>,
+    children: [
+      {
+        path: "*",
+        element: <Error></Error>,
+      },
+    ],
   },
 ]);
 

@@ -5,4 +5,5 @@ export const ROUTES = {
     STATIC: "/book/:book_id",
     DYNAMIC: (book_id) => `/book/${book_id}`,
   },
+  FAQ: "/faq",
 };
