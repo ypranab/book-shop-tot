@@ -1,12 +1,24 @@
-import { useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import toast from "react-hot-toast";
+import { useLocation } from "react-router-dom";
 
 const SingleBookDetails = () => {
-  const [allBooks, setAllBooks] = useState([]);
-  const { book_id } = useParams();
+  //const [allBooks, setAllBooks] = useState([]);
+  //const { book_id } = useParams();
   const location = useLocation();
-  const { author } = location.state || {};
+  const {
+    author,
+    bookName,
+    image,
+    rating,
+    category,
+    review,
+    tags,
+    totalPages,
+    publisher,
+    yearOfPublishing,
+  } = location.state || {};
 
+  /*
   useEffect(() => {
     fetch("/fakeDB.json")
       .then((res) => res.json())
@@ -25,7 +37,11 @@ const SingleBookDetails = () => {
     publisher,
     yearOfPublishing,
   } = singleBook;
-  console.log(singleBook);
+*/
+
+  const handleToast = () => {
+    toast.success("Good");
+  };
 
   return (
     <div className="card lg:card-side bg-base-100 shadow-xl w-3/4 mx-auto m-10 py-16">
@@ -44,7 +60,9 @@ const SingleBookDetails = () => {
         <p>Year Of Publishing: {yearOfPublishing}</p>
         <div className="card-actions justify-end">
           <button className="btn btn-primary">Wish to Read</button>
-          <button className="btn btn-primary">Add to Cart</button>
+          <button onClick={handleToast} className="btn btn-primary">
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>

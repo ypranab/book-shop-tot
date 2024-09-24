@@ -17,7 +17,7 @@ const HomePage = () => {
   return (
     <>
       <Banner></Banner>
-      <div className="m-16 gap-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="my-24 gap-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {books.map((book) => (
           <Books key={book.bookId} book={book}></Books>
         ))}

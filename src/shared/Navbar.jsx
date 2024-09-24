@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { ROUTES } from "../routes/routes";
+
 const Navbar = () => {
   return (
     <div className="navbar bg-base-100 z-10">
@@ -24,7 +27,7 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
             <li>
-              <a>Home</a>
+              <Link to={`${ROUTES.HOME}`}>Home</Link>
             </li>
             <li>
               <a>About</a>
@@ -37,12 +40,14 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Books</a>
+        <Link to={`${ROUTES.HOME}`} className="btn btn-ghost text-xl">
+          Books
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a>Home</a>
+            <Link to={`${ROUTES.HOME}`}>Home</Link>
           </li>
           <li>
             <a>About</a>
