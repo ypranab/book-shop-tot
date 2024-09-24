@@ -29,8 +29,7 @@ const FAQ = () => {
         <div className="collapse collapse-arrow bg-base-200 mb-4">
           <input type="radio" name="my-accordion-2" />
           <div className="collapse-title text-xl font-medium">
-            What is Royal Caribbean's service gratuities (tips) price and
-            policy?
+            What is Royal Caribbean service gratuities (tips) price and policy?
           </div>
           <div className="collapse-content">
             <p>

@@ -39,8 +39,11 @@ const SingleBookDetails = () => {
   } = singleBook;
 */
 
-  const handleToast = () => {
-    toast.success("Good");
+  const handleToastCart = () => {
+    toast.success("Added to cart");
+  };
+  const handleToastWish = () => {
+    toast.success("Added to wishlist");
   };
 
   return (
@@ -59,8 +62,10 @@ const SingleBookDetails = () => {
         <p>Publisher: {publisher}</p>
         <p>Year Of Publishing: {yearOfPublishing}</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Wish to Read</button>
-          <button onClick={handleToast} className="btn btn-primary">
+          <button onClick={handleToastWish} className="btn btn-primary">
+            Wish to Read
+          </button>
+          <button onClick={handleToastCart} className="btn btn-primary">
             Add to Cart
           </button>
         </div>
