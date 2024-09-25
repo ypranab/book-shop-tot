@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const SingleBookDetails = () => {
+  const navigate = useNavigate();
   const [allBooks, setAllBooks] = useState([]);
   const { book_id } = useParams();
 
@@ -29,6 +30,10 @@ const SingleBookDetails = () => {
   }, []);
 
   const singleBook = allBooks.find((book) => book.bookId == book_id) || {};
+  if (Object.keys(singleBook).length === 0) {
+    navigate("/error");
+  }
+
   const {
     author,
     bookName,
