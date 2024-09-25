@@ -3,7 +3,7 @@ import { ROUTES } from "../routes/routes";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 z-10">
+    <div className="navbar bg-zinc-200 mb-4">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -36,12 +36,12 @@ const Navbar = () => {
               <a>BLog</a>
             </li>
             <li>
-              <a>FAQ</a>
+              <Link to={`${ROUTES.FAQ}`}>FAQ</Link>
             </li>
           </ul>
         </div>
         <Link to={`${ROUTES.HOME}`} className="btn btn-ghost text-xl">
-          Books
+          eLibrary
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -62,7 +62,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         <a className="btn">Buy Book</a>
-        <a className="btn">Sign In</a>
+        <a className="btn mx-2">Sign In</a>
       </div>
     </div>
   );

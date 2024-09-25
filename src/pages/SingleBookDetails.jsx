@@ -43,10 +43,10 @@ const SingleBookDetails = () => {
   } = singleBook;
 
   const handleToastCart = () => {
-    toast.success("Added to cart");
+    toast.success(`${bookName} is added to cart succesfully!!`);
   };
   const handleToastWish = () => {
-    toast.success("Added to wishlist");
+    toast.success(`${bookName} is added to wishlist succesfully!!`);
   };
 
   return (
