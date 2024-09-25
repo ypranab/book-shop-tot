@@ -5,7 +5,7 @@ const FAQ = () => {
         <h1 className="text-center text-3xl my-10">FAQ</h1>
 
         <div className="collapse collapse-arrow bg-base-200 mb-4">
-          <input type="radio" name="my-accordion-2" checked="checked" />
+          <input type="radio" name="my-accordion-2" defaultChecked />
           <div className="collapse-title text-xl font-medium">
             What is React.js and Explain the concept of &quot;components&quot;
             in React?
@@ -32,15 +32,21 @@ const FAQ = () => {
             <p>
               JSX is a syntax extension for JavaScript that lets you write
               HTML-like code in your React components. It's compiled into
-              regular JavaScript before it's run. How it works: Compilation:
-              When you write JSX code, it's not directly executed by the
-              browser. Instead, it's transformed into regular JavaScript
+              regular JavaScript before it's run.
+              <br></br>
+              How it works:
+              <br></br>
+              Compilation: When you write JSX code, it's not directly executed
+              by the browser. Instead, it's transformed into regular JavaScript
               function calls before it's run. This transformation is typically
-              done using Babel or a similar tool. React Elements: The
-              transformed JSX code creates React elements. These elements are
-              plain JavaScript objects that represent the UI you want to render.
-              Rendering: React then uses these elements to update the DOM
-              (Document Object Model) of your web page. This process is
+              done using Babel or a similar tool.
+              <br></br>
+              <br></br>React Elements: The transformed JSX code creates React
+              elements. These elements are plain JavaScript objects that
+              represent the UI you want to render.
+              <br></br>
+              <br></br>Rendering: React then uses these elements to update the
+              DOM (Document Object Model) of your web page. This process is
               efficient, as React only updates the parts of the DOM that have
               actually changed.
             </p>
@@ -57,15 +63,19 @@ const FAQ = () => {
             <p>
               Virtual DOM: A lightweight, in-memory representation of the actual
               DOM. Created when a component is rendered. Updated when the
-              component's state or props change. How React uses it: Diffing:
-              React compares the previous and new virtual DOMs to identify the
-              minimal set of changes needed to update the actual DOM. Batching:
-              React groups multiple state updates into a single batch to
-              minimize re-renders. Optimized updates: React efficiently updates
-              the actual DOM only for the parts that have changed, reducing
-              performance overhead. This process results in faster rendering and
-              improved user experience, especially for large or complex
-              applications.
+              component's state or props change.
+              <br></br>How React uses it:
+              <br></br>Diffing: React compares the previous and new virtual DOMs
+              to identify the minimal set of changes needed to update the actual
+              DOM.
+              <br></br>
+              <br></br>Batching: React groups multiple state updates into a
+              single batch to minimize re-renders.
+              <br></br>
+              <br></br>Optimized updates: React efficiently updates the actual
+              DOM only for the parts that have changed, reducing performance
+              overhead. This process results in faster rendering and improved
+              user experience, especially for large or complex applications.
             </p>
           </div>
         </div>
@@ -101,13 +111,18 @@ const FAQ = () => {
               other hand, are data passed down from a parent component to its
               child components. They are immutable and cannot be modified
               directly within the child component. Props are typically used to
-              configure or provide data to child components. Key differences:
+              configure or provide data to child components.
+              <br></br>
+              <br></br>Key differences:
+              <br></br>
+              <br></br>
               Ownership: State is owned and managed by the component itself,
-              while props are passed down from a parent component. Mutability:
-              State can be modified within the component, while props are
-              immutable. Re-rendering: Changes to state trigger re-renders of
-              the component, while changes to props can trigger re-renders if
-              they affect the component's render logic.
+              while props are passed down from a parent component.
+              <br></br>Mutability: State can be modified within the component,
+              while props are immutable.
+              <br></br>Re-rendering: Changes to state trigger re-renders of the
+              component, while changes to props can trigger re-renders if they
+              affect the component's render logic.
             </p>
           </div>
         </div>
@@ -123,13 +138,17 @@ const FAQ = () => {
               useEffect is a React hook that allows you to perform side effects
               in functional components. Side effects are actions that have an
               external impact, such as: Fetching data from an API Updating the
-              DOM directly Setting up subscriptions or timers When to use
-              useEffect: To fetch data: When you need to fetch data from an API
-              and update your component's state based on the response. To update
-              the DOM: When you need to directly manipulate the DOM, such as
-              adding or removing elements. To set up subscriptions or timers:
-              When you need to subscribe to external events or start timers that
-              will trigger actions within your component.{" "}
+              DOM directly Setting up subscriptions or timers.
+              <br></br>When to use useEffect:
+              <br></br>
+              <br></br>To fetch data: When you need to fetch data from an API
+              and update your component's state based on the response.
+              <br></br>
+              <br></br>To update the DOM: When you need to directly manipulate
+              the DOM, such as adding or removing elements. To set up
+              subscriptions or timers: When you need to subscribe to external
+              events or start timers that will trigger actions within your
+              component.
             </p>
           </div>
         </div>

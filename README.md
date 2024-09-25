@@ -16,6 +16,7 @@ The details page has two buttons; Add to Read and Add to Cart.
 When any of that button is clicked a toast appears.
 
 A custom 404 error page is added for convenience.
-CSS Frameworks’: Tailwind is used with DaisyUI.
 
-Deployment: Netlify
+#CSS Frameworks’: Tailwind is used with DaisyUI.
+
+#Deployment: Netlify
